@@ -7,7 +7,6 @@ Gem::Specification.new do |spec|
   spec.email = ["daniel.schoppmann@dotruby.com", "victor.cobos@dotruby.com"]
   spec.homepage = "https://railsbootui.com"
   spec.summary = "Rails View Components for Bootstrap"
-  # spec.description = "TODO: Description of Railsboot."
   spec.license = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the "allowed_push_host"
@@ -21,7 +20,9 @@ Gem::Specification.new do |spec|
     Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
   end
 
-  spec.add_runtime_dependency "rails", ">= 7.1"
+  spec.required_ruby_version = ">= 3.0.0"
+
+  spec.add_runtime_dependency "rails", ">= 7.0"
   spec.add_runtime_dependency "view_component", ">= 3.0.0", "< 4.0.0"
 
   spec.add_development_dependency "minitest", "~> 5.0"
