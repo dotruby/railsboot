@@ -1,0 +1,9 @@
+<%= content_tag :thead, **@html_attributes do %>
+  <% if rows? %>
+    <% rows.each do |row| %>
+      <%= row %>
+    <% end %>
+  <% else %>
+    <% content %>
+  <% end %>
+<% end %>

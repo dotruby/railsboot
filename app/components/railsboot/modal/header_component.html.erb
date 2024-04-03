@@ -1,0 +1,4 @@
+<%= content_tag :div, **@html_attributes do %>
+  <%= content %>
+  <%= render Railsboot::CloseButtonComponent.new(data: {bs_dismiss: "modal"}) %>
+<% end %>

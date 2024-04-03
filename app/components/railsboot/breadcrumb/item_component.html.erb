@@ -1,0 +1,11 @@
+<%= render Railsboot::BaseComponent.new(**@html_attributes) do %>
+  <% if @active %>
+    <%= @text %>
+  <% else %>
+    <% if @href.present? %>
+      <%= link_to @text, @href %>
+    <% else %>
+      <%= @text %>
+    <% end %>
+  <% end %>
+<% end %>

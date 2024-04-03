@@ -1,0 +1,9 @@
+<%= content_tag :div, **@html_attributes do %>
+  <%= action %>
+
+  <ul class="dropdown-menu">
+    <% items.each do |item| %>
+      <%= item %>
+    <% end %>
+  </ul>
+<% end %>

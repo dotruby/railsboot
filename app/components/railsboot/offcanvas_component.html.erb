@@ -1,0 +1,4 @@
+<%= render Railsboot::BaseComponent.new(**@html_attributes) do %>
+  <%= header if header? %>
+  <%= body if body? %>
+<% end %>

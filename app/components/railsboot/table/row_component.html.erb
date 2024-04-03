@@ -1,0 +1,9 @@
+<%= content_tag :tr, **@html_attributes do %>
+  <% if cells? %>
+    <% cells.each do |cell| %>
+      <%= cell %>
+    <% end %>
+  <% else %>
+    <% content %>
+  <% end %>
+<% end %>

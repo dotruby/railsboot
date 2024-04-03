@@ -1,0 +1,10 @@
+<%= render Railsboot::BaseComponent.new(**@html_attributes) do %>
+  <%= content_tag :h2, class: "accordion-header" do %>
+    <%= content_tag :button, header, class: class_names("accordion-button", "collapsed" => !@expanded), type: "button", data: {bs_toggle: "collapse", bs_target: "##{@id}"}, aria: {expanded: @expanded, controls: @id} %>
+  <% end %>
+  <%= content_tag :div, id: @id, class: class_names("accordion-collapse collapse", "show" => @expanded), data: parent_reference do %>
+    <%= content_tag :div, class: "accordion-body" do %>
+      <%= body %>
+    <% end %>
+  <% end %>
+<% end %>

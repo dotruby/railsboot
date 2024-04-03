@@ -1,0 +1,9 @@
+<%= content_tag :div, **@html_attributes do %>
+  <%= content_tag :div, class: class_names("modal-dialog", "modal-#{@size}" => @size.present?) do %>
+    <%= content_tag :div, class: "modal-content" do %>
+      <%= header if header? %>
+      <%= body if body? %>
+      <%= footer if footer? %>
+    <% end %>
+  <% end %>
+<% end %>

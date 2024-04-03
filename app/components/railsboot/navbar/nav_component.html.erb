@@ -1,0 +1,5 @@
+<%= render Railsboot::BaseComponent.new(**@html_attributes) do %>
+  <% items.each do |item| %>
+    <%= item %>
+  <% end %>
+<% end %>

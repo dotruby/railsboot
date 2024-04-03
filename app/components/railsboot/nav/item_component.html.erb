@@ -1,0 +1,19 @@
+<% if @wrapper_item %>
+
+  <%= content_tag @wrapper_tag, **adjusted_wrapper_html_attributes do %>
+    <% if content? %>
+      <%= content %>
+    <% else %>
+      <%= link_to @text, @href, **@html_attributes %>
+    <% end %>
+  <% end %>
+
+<% else %>
+
+  <% if content? %>
+    <%= content %>
+  <% else %>
+    <%= link_to @text, @href, **@html_attributes %>
+  <% end %>
+
+<% end %>

@@ -1,0 +1,9 @@
+<%= render Railsboot::BaseComponent.new(**@html_attributes) do %>
+  <%= head if head.present? %>
+  <%= body if body.present? %>
+
+  <%# Fallback if slots are not set %>
+  <% if head.blank? && body.blank? %>
+    <%= content %>
+  <% end %>
+<% end %>

@@ -1,0 +1,7 @@
+<%= render Railsboot::BaseComponent.new(**@html_attributes) do %>
+  <%= render Railsboot::BaseComponent.new(**@wrapper_attributes) do %>
+    <% items.each do |item| %>
+      <%= item %>
+    <% end %>
+  <% end %>
+<% end %>

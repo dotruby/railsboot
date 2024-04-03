@@ -1,0 +1,10 @@
+<%= content_tag :div, **@html_attributes do %>
+  <%= header %>
+  <% bodies.each do |body| %>
+    <%= body %>
+  <% end %>
+  <% list_groups.each do |list_group| %>
+    <%= list_group %>
+  <% end %>
+  <%= footer %>
+<% end %>

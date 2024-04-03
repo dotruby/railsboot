@@ -1,0 +1,21 @@
+<% if button? %>
+
+  <%= content_tag :button, type: "button", **@html_attributes do %>
+    <%= @text.presence || content %>
+  <% end %>
+
+<% elsif link? %>
+
+  <%= link_to @href, **@html_attributes do %>
+    <%= @text.presence || content %>
+  <% end %>
+
+<% elsif input? %>
+
+  <% if @form.present? %>
+    <%= @form.submit(**@html_attributes) %>
+  <% else %>
+    <%= helpers.tag :input, **@html_attributes %>
+  <% end %>
+
+<% end %>

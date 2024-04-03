@@ -1,0 +1,5 @@
+<% if button? %>
+  <%= render Railsboot::Button::ButtonComponent.new(text: @text, variant: @variant, **@html_attributes) %>
+<% else %>
+  <%= render Railsboot::Button::LinkComponent.new(text: @text, variant: @variant, **@html_attributes) %>
+<% end %>

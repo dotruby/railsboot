@@ -1,0 +1,5 @@
+<%= content_tag :div, **@html_attributes do %>
+  <%= content_tag :h5, @text, class: "offcanvas-title" if @text.present? %>
+  <%= content %>
+  <%= render Railsboot::CloseButtonComponent.new(data: {bs_dismiss: "offcanvas"}) %>
+<% end %>
