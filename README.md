@@ -6,15 +6,13 @@ https://railsbootui.com
 
 ## Installation
 
-Add `railsboot` to your Gemfile:
+Add `railsboot` to your Gemfile and run `bundle install`:
 
 ```ruby
-bundle add railsboot
+bundle add railsboot && bundle install
 ```
 
-and run `bundle install`.
-
-Ensure that you have correctly setup bootstrap in your Rails app.
+Also make ensure that you have correctly setup bootstrap in your Rails app. Otherwise the bootstrap styles and js files will not work.
 
 ## Usage
 Each view component can be rendered with either a standard component call
@@ -23,7 +21,7 @@ Each view component can be rendered with either a standard component call
 <%= render Railsboot::BadgeComponent.new { "My badge"} %>
 ```
 
-or with the integrated helper
+or with the integrated component helper
 
 ```erb
 <%= railsboot_badge { "My badge"} %>
