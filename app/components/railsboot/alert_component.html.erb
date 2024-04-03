@@ -1,0 +1,4 @@
+<%= render Railsboot::BaseComponent.new(**@html_attributes) do %>
+  <%= content %>
+  <%= render Railsboot::CloseButtonComponent.new(data: {bs_dismiss: "alert"}) if @dismissible %>
+<% end %>
