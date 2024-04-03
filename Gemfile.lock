@@ -146,6 +146,7 @@ GEM
       racc (~> 1.4)
     nokogiri (1.16.3-x86_64-linux)
       racc (~> 1.4)
+    pagy (6.5.0)
     psych (5.1.2)
       stringio
     public_suffix (5.0.4)
@@ -244,6 +245,7 @@ PLATFORMS
 DEPENDENCIES
   capybara
   minitest (~> 5.0)
+  pagy (~> 6.4)
   puma
   railsboot!
   selenium-webdriver

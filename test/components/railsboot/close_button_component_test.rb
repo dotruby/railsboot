@@ -1,6 +1,6 @@
 require "test_helper"
 
-class Railsboot::BadgeComponentTest < Minitest::Test
+class Railsboot::CloseButtonComponentTest < Minitest::Test
   include Railsboot::ComponentTestHelpers
 
   def test_renders_the_close_button

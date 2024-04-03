@@ -1,6 +1,6 @@
 require "test_helper"
 
-class Railsboot::BadgeComponentTest < Minitest::Test
+class Railsboot::AlertComponentTest < Minitest::Test
   include Railsboot::ComponentTestHelpers
 
   def test_renders_content_within_alert
