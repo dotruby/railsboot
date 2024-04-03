@@ -1,8 +1,6 @@
 require "test_helper"
 
-class Railsboot::ProgressComponentTest < Minitest::Test
-  include Railsboot::ComponentTestHelpers
-
+class Railsboot::ProgressComponentTest < ViewComponent::TestCase
   def test_renders_progress_with_primary_color_as_the_default
     render_inline(Railsboot::ProgressComponent.new)
     assert_selector "div.progress > div.progress-bar"

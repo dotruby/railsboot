@@ -1,25 +1,23 @@
 require "test_helper"
 
-class Railsboot::ToastComponentTest < Minitest::Test
-  include Railsboot::ComponentTestHelpers
-
-  def test_renders_toast_component_as_the_default
+class Railsboot::ToastComponentTest < ViewComponent::TestCase
+  test "renders toast component as the default" do
     render_inline(Railsboot::ToastComponent.new)
     assert_selector "div.toast"
   end
 
-  def test_sets_correct_role_attribute
+  test "sets correct role attribute" do
     render_inline(Railsboot::ToastComponent.new)
     assert_selector "div[role='alert']"
   end
 
-  def test_sets_correct_aria_attributes
+  test "sets correct aria attributes" do
     render_inline(Railsboot::ToastComponent.new)
     assert_selector "div[aria-live='assertive']"
     assert_selector "div[aria-atomic='true']"
   end
 
-  def test_allows_any_additional_html_attribute
+  test "allows any additional html_attribute" do
     render_inline(Railsboot::ToastComponent.new(id: "my-id", class: "my-class"))
     assert_selector "div.toast.my-class"
     assert_selector "div#my-id"

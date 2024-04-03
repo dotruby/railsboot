@@ -1,8 +1,6 @@
 require "test_helper"
 
-class Railsboot::SpinnerComponentTest < Minitest::Test
-  include Railsboot::ComponentTestHelpers
-
+class Railsboot::SpinnerComponentTest < ViewComponent::TestCase
   def test_renders_spinner_border_with_primary_color_as_the_default
     render_inline(Railsboot::SpinnerComponent.new)
     assert_selector "div.spinner-border.text-primary"
