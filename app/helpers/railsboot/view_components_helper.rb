@@ -27,7 +27,7 @@ module Railsboot
     }
 
     RAILSBOOT_HELPERS.each do |name, component|
-      define_method "railsboot_#{name}" do |*args, **kwargs, &block|
+      define_method :"railsboot_#{name}" do |*args, **kwargs, &block|
         render component.constantize.new(*args, **kwargs), &block
       end
     end

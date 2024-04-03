@@ -1,52 +1,52 @@
 require "test_helper"
 
 class Railsboot::SpinnerComponentTest < ViewComponent::TestCase
-  def test_renders_spinner_border_with_primary_color_as_the_default
+  test "renders spinner border with primary color as the default" do
     render_inline(Railsboot::SpinnerComponent.new)
     assert_selector "div.spinner-border.text-primary"
   end
 
   Railsboot::SpinnerComponent::COLORS.each do |color|
-    define_method "test_renders_#{color}_as_the_color" do
+    test "renders #{color} as the color" do
       render_inline(Railsboot::SpinnerComponent.new(color: color))
       assert_selector "div.spinner-border.text-#{color}"
     end
   end
 
-  def test_raises_on_wrong_color_argument
+  test "raises on wrong color argument" do
     assert_raises(ArgumentError) do
       render_inline(Railsboot::SpinnerComponent.new(color: "whatever"))
     end
   end
 
   Railsboot::SpinnerComponent::STYLES.each do |style|
-    define_method "test_renders_#{style}_as_the_style" do
+    test "renders #{style} as the style" do
       render_inline(Railsboot::SpinnerComponent.new(style: style))
       assert_selector "div.spinner-#{style}.text-primary"
     end
   end
 
-  def test_raises_on_wrong_style_argument
+  test "raises on wrong style argument" do
     assert_raises(ArgumentError) do
       render_inline(Railsboot::SpinnerComponent.new(style: "whatever"))
     end
   end
 
-  def test_sets_correct_role_attribute
+  test "sets correct role attribute" do
     render_inline(Railsboot::SpinnerComponent.new)
     assert_selector "div[role='status']"
   end
 
-  def test_renders_visually_hidden_span_inside
+  test "renders visually hidden span inside" do
     render_inline(Railsboot::SpinnerComponent.new)
     assert_selector "div.spinner-border.text-primary" do
       assert_selector "span.visually-hidden", text: "Loading..."
     end
   end
 
-  def test_allows_any_additional_html_attribute
-    render_inline(Railsboot::SpinnerComponent.new(id: "my-id", class: "my-class"))
-    assert_selector "div.my-class"
-    assert_selector "div#my-id"
+  test "allows any additional html_attribute" do
+    render_inline(Railsboot::SpinnerComponent.new(id: "custom-id", class: "custom-class"))
+    assert_selector "div.custom-class"
+    assert_selector "div#custom-id"
   end
 end

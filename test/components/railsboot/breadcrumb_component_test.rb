@@ -1,25 +1,23 @@
 require "test_helper"
 
-class Railsboot::BreadcrumbComponentTest < Minitest::Test
-  include Railsboot::ComponentTestHelpers
-
-  def test_renders_default_breadcrumb_code
+class Railsboot::BreadcrumbComponentTest < ViewComponent::TestCase
+  test "renders default breadcrumb code" do
     render_inline(Railsboot::BreadcrumbComponent.new)
     assert_selector "nav > ol.breadcrumb"
   end
 
-  def test_sets_correct_aria_label_attribute
+  test "sets correct aria label attribute" do
     render_inline(Railsboot::BreadcrumbComponent.new)
     assert_selector "nav[aria-label='breadcrumb']"
   end
 
-  def test_allows_any_additional_html_attribute
+  test "allows any additional html attribute" do
     render_inline(Railsboot::BreadcrumbComponent.new(id: "custom-id", class: "custom-class"))
     assert_selector "nav.custom-class"
     assert_selector "nav#custom-id"
   end
 
-  def test_allows_any_additional_html_attribute_for_the_wrapping_element
+  test "allows any additional html attribute for the wrapping element" do
     render_inline(Railsboot::BreadcrumbComponent.new(wrapper_attributes: {id: "custom-id", class: "custom-class"}))
     assert_selector "ol.breadcrumb.custom-class"
     assert_selector "ol.breadcrumb#custom-id"

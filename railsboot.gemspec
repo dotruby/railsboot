@@ -1,14 +1,14 @@
 require_relative "lib/railsboot/version"
 
 Gem::Specification.new do |spec|
-  spec.name        = "railsboot"
-  spec.version     = Railsboot::VERSION
-  spec.authors     = ["Daniel Schoppmann", "Victor Cobos"]
-  spec.email       = ["daniel.schoppmann@dotruby.com", "victor.cobos@dotruby.com"]
-  spec.homepage    = "https://railsbootui.com"
-  spec.summary     = "Rails View Components for Bootstrap"
+  spec.name = "railsboot"
+  spec.version = Railsboot::VERSION
+  spec.authors = ["Daniel Schoppmann", "Victor Cobos"]
+  spec.email = ["daniel.schoppmann@dotruby.com", "victor.cobos@dotruby.com"]
+  spec.homepage = "https://railsbootui.com"
+  spec.summary = "Rails View Components for Bootstrap"
   # spec.description = "TODO: Description of Railsboot."
-  spec.license     = "MIT"
+  spec.license = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the "allowed_push_host"
   # to allow pushing to a single host or delete this section to allow pushing to any host.
