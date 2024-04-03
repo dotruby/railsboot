@@ -17,3 +17,4 @@ gem "pagy", "~> 6.4"
 
 gem "capybara"
 gem "selenium-webdriver"
+gem "standard"
