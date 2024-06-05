@@ -2,7 +2,7 @@
 Railsboot is an implementation of the famous Bootstrap CSS framework using Rails View Components.
 
 ## Preview
-https://railsbootui.com
+You'll find detailed information on how to use Railsboot on https://railsbootui.com
 
 ## Installation
 
@@ -25,6 +25,14 @@ or with the integrated component helper
 
 ```erb
 <%= railsboot_badge { "My badge"} %>
+```
+
+## Configuration
+Several view components ensure a valid bootstrap theme color scheme, so if you tweaked or enhanced the standard bootstrap volor palette, you should also add this to the gem. Create an initializer (in `config/initializers/railsboot.rb`):
+
+```ruby
+# defaults to ["primary", "secondary", "success", "danger", "warning", "info", "light", "dark"]
+Railsboot.colors = ["primary", "secondary", "my-color"]
 ```
 
 ## Development

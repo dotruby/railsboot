@@ -1,6 +1,6 @@
 # parent class for all bootstrap related components
 class Railsboot::Component < ViewComponent::Base
-  COLORS = ["primary", "secondary", "success", "danger", "warning", "info", "light", "dark"].freeze
+  COLORS = Railsboot.colors.freeze
   DEFAULT_COLOR = "primary".freeze
 
   protected
