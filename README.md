@@ -1,5 +1,6 @@
 # Railsboot
-Railsboot is an implementation of the famous Bootstrap CSS framework using Rails View Components.
+### Railsboot is an implementation of the famous Bootstrap CSS framework using Rails View Components.
+[![CI](https://github.com/dotruby/railsboot/workflows/CI/badge.svg)](https://github.com/dotruby/railsboot/actions) [![Gem Version](https://badge.fury.io/rb/railsboot.svg)](https://badge.fury.io/rb/railsboot)
 
 ## Preview
 You'll find detailed information on how to use Railsboot on https://railsbootui.com
