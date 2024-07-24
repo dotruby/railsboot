@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    railsboot (0.1.0)
+    railsboot (0.2.0)
       rails (>= 7.0)
       view_component (>= 3.0.0, < 4.0.0)
 
