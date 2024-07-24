@@ -11,6 +11,7 @@ module Railsboot
       button_link: "Railsboot::Button::LinkComponent",
       card: "Railsboot::CardComponent",
       close_button: "Railsboot::CloseButtonComponent",
+      container: "Railsboot::ContainerComponent",
       heading: "Railsboot::HeadingComponent",
       list_group: "Railsboot::ListGroupComponent",
       modal: "Railsboot::ModalComponent",
