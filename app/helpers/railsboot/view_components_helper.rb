@@ -1,7 +1,7 @@
 module Railsboot
   module ViewComponentsHelper
     RAILSBOOT_HELPERS = {
-      accordion: "Railsboot::BadgeComponent",
+      accordion: "Railsboot::AccordionComponent",
       alert: "Railsboot::AlertComponent",
       badge: "Railsboot::BadgeComponent",
       breadcrumb: "Railsboot::BreadcrumbComponent",
